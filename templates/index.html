@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <form method="post">
+                <table class="table">
+                    <td>
+                        {{ form.csrf_token() }}
+                        {% for field in form if field.name != 'csrf_token' %}
+                            <tr>
+                                <td>
+                                    {% if field.name != "submit" %}
+                                        {{ field.label }}   
+                                    {% endif %} 
+                                </td>
+                                <td>
+                                    {{ field }}
+                                </td>
+                                <td>
+                                    {% for error in field.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        <button type="submit">Отправить</button>
+                    </td>
+                </table>
+            </form>
+        </table>
+    </body>
+</html>
