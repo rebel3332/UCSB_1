@@ -16,6 +16,7 @@
 
 **Применяемые технологии:**
 * Python
+* HTML
 * PostgreSQL
 * flask
 * flask_wtf
