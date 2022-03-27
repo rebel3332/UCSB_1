@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm
 from pyparsing import Regex
 from wtforms import StringField
 from wtforms.validators import ValidationError, Regexp, DataRequired
-import os
+# import os
 import psycopg2
 from config import *
 
